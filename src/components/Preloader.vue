@@ -2,10 +2,10 @@
   <div id="preloader" v-if="isVisible" class="preloader-wrapper">
     <div id="ctn-preloader" class="ctn-preloader">
       <div class="animation-preloader">
-        <div class="spinner"></div>
+        <!-- <div class="spinner"></div> -->
         <div class="txt-loading">
           <span
-            v-for="(letter, index) in 'PANEXPRESS'"
+            v-for="(letter, index) in 'HOUSEOFPEISHY'"
             :key="index"
             :data-text-preloader="letter"
             class="letters-loading"
@@ -54,7 +54,7 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: white;
+  background: var(  --bg-primary);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,7 +108,7 @@ onMounted(() => {
 .letters-loading {
   font-size: 32px;
   font-weight: bold;
-  color: var(--text-primary, #333);
+  color: var(--text-primary);
   opacity: 0;
   animation: letterBounce 0.8s ease-in-out infinite;
 }

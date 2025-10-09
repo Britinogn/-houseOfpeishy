@@ -2,84 +2,167 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel="icon" type="image/x-icon" href="/images/favico.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>House Of Peishy</title>
+    <title>House of Peishy - Where Elegance Meets Empowerment </title>
+    <meta name="author" content="Tino" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="House of Peishy - Where Beauty Finds Its Home" />
+    <meta property="og:description" content="Discover premium hair styling, wigs, braids, and beauty services at House of Peishy – where your hair does the talking." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://houseofpeishy.vercel.app/" />
+    <meta property="og:image" content="https://houseofpeishy.vercel.app/images/hero-bg.jpg" />
+    <meta property="og:site_name" content="House of Peishy" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@gideon_abe" />
+    <meta name="twitter:image" content="https://4kwallpapers.com/images/walls/thumbs_3t/22715.jpg" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   
-  
-    <!-- preloader  -->
-    <div id="preloader">
-        <div id="ctn-preloader" class="ctn-preloader">
-            <div class="animation-preloader">
-                <div class="spinner"></div>
-                <div class="txt-loading">
-                    <span data-text-preloader="P" class="letters-loading">
-                      P
-                    </span>
-                    <span data-text-preloader="A" class="letters-loading">
-                      A
-                    </span>
-                    <span data-text-preloader="N" class="letters-loading">
-                      N
-                    </span>
-                    <span data-text-preloader="E" class="letters-loading">
-                        E
-                    </span>
-                    <span data-text-preloader="X" class="letters-loading">
-                      X
-                    </span>
-                    <span data-text-preloader="P" class="letters-loading">
-                        P
-                    </span>
-                    <span data-text-preloader="R" class="letters-loading">
-                      R
-                    </span>
-                      <span data-text-preloader="E" class="letters-loading">
-                  E
-                    </span>
-                    <span data-text-preloader="S" class="letters-loading">
-                      S
-                    </span>
-                    <span data-text-preloader="S" class="letters-loading">
-                      S
-                    </span>
-                    
-                                        </div>
-            </div>
-            <div class="loader">
-                <div class="row">
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- preloader end -->
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   </body>
 </html>
+
+<script type="text/javascript">
+  (function () {
+    var options = {
+      whatsapp: "+234 704 632 4060", // Replace with your WhatsApp number (e.g., 2348123456789)
+      call_to_action: "Transform Your Look ", // Text on hover, // Text on hover
+      button_color: "var(--primary)", // Use your theme color
+      position: "right", // left or right
+      order: "whatsapp", // You can add others if needed
+      greeting: "👋 Hello! Ready to transform your look? How can we help?", // Custom greeting message
+      welcome_message: "Hi there! Welcome to House of Peishy. What's your beauty goal today?", // Initial chat message
+    };
+
+    var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
+    var s = document.createElement('script'); 
+    s.type = 'text/javascript'; 
+    s.async = true; 
+    s.src = url + '/widget-send-button/js/init.js';
+    s.onload = function () { 
+      WhWidgetSendButton.init(host, proto, options); 
+
+      // Enhanced custom styles with animations, responsiveness, and accessibility
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .wh-widget-send-button {
+          bottom: 1.5rem !important;
+          right: 1.5rem !important;
+          transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          animation: float 3s ease-in-out infinite;
+          z-index: 9999;
+          touch-action: manipulation; /* Better mobile touch */
+        }
+
+        .wh-widget-send-button:hover {
+          transform: translateY(-4px) scale(1.05) !important;
+          animation-play-state: paused;
+        }
+
+        .wh-widget-send-button__wrap {
+          background: var(--primary) !important;
+          border-radius: 50% !important;
+          box-shadow: 0 8px 25px rgba(0,0,0,0.15), 0 0 0 0 rgba(233, 30, 99, 0.4) !important;
+          border: 2px solid rgba(255,255,255,0.2) !important;
+          animation: pulse-ring 2s infinite;
+          overflow: hidden; /* For rounded clip */
+        }
+
+        .wh-widget-send-button__wrap:hover {
+          box-shadow: 0 12px 35px rgba(0,0,0,0.2), 0 0 0 8px rgba(233, 30, 99, 0.3) !important;
+          transform: scale(1.1) !important;
+        }
+
+        .wh-widget-send-button__icon {
+          transition: transform 0.3s ease !important;
+        }
+
+        .wh-widget-send-button__icon:hover {
+          transform: rotate(360deg) scale(1.2) !important;
+        }
+
+        .wh-widget-send-button__text {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+          font-weight: 600 !important;
+          letter-spacing: 0.5px !important;
+          font-size: 0.875rem !important;
+          backdrop-filter: blur(10px) !important;
+        }
+
+        /* Floating animation */
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-8px); }
+        }
+
+        /* Pulse ring animation for engagement */
+        @keyframes pulse-ring {
+          0% {
+            box-shadow: 0 0 0 0 rgba(233, 30, 99, 0.4);
+          }
+          70% {
+            box-shadow: 0 0 0 10px rgba(233, 30, 99, 0);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(233, 30, 99, 0);
+          }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+          .wh-widget-send-button {
+            bottom: 1rem !important;
+            right: 1rem !important;
+            left: auto !important;
+          }
+        }
+
+        /* Accessibility: Focus styles */
+        .wh-widget-send-button:focus {
+          outline: 3px solid var(--accent);
+          outline-offset: 2px;
+        }
+
+        /* Dark mode adjustments */
+        [data-theme="dark"] .wh-widget-send-button__wrap {
+          border-color: rgba(255,255,255,0.1) !important;
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Accessibility: Add ARIA labels dynamically
+      const button = document.querySelector('.wh-widget-send-button');
+      if (button) {
+        button.setAttribute('aria-label', 'Open WhatsApp chat');
+        button.setAttribute('role', 'button');
+        button.setAttribute('tabindex', '0');
+        button.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            button.click();
+          }
+        });
+      }
+    };
+    var x = document.getElementsByTagName('script')[0]; 
+    x.parentNode.insertBefore(s, x);
+  })();
+</script>
 
 <!-- npm install axios vue-toastification @fullcalendar/vue3 vue-chartjs chart.js @stripe/stripe-js -->

@@ -6,7 +6,7 @@ import PublicAppointments from '../views/Appointments.vue'
 import PublicServices from '../views/Services.vue'
 import ServiceDetails from '../views/ServiceDetails.vue'
 import PublicGallery from '../views/Gallery.vue'
-
+import Contact from '../views/Contact.vue'
 // Auth Views (no layout)
 import Login from '../views/Login.vue'
 
@@ -45,12 +45,18 @@ const routes = [
     name: 'ServiceDetails',
     component: ServiceDetails
   },
-{
+
+  {
     path: '/gallery',
     name: 'PublicGallery',
     component: PublicGallery
   },
 
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
+  },
   
   
   // Auth Route (Login - no layout)

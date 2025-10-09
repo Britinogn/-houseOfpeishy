@@ -2,57 +2,57 @@
 <template>
   <section class="footer">
     <div class="social-list">
-      <a
+      <!-- <router-link 
         href="https://github.com/Britinogn"
         class="social-link"
         target="_blank"
         rel="noopener noreferrer"
       >
         <ion-icon name="logo-github"></ion-icon>
-      </a>
+      </router-link> -->
 
-      <a
-        href="https://www.facebook.com/profile.php?id=100093484083511&mibextid=ZbWKwL"
+      <router-link
+        href="https://www.facebook.com/profile.php?id=100086133922788"
         class="social-link"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <ion-icon name="logo-facebook"></ion-icon>
-      </a>
+     <i class="fa-brands fa-facebook"></i>
+      </router-link>
 
-      <a
-        href="https://twitter.com/officialbritino"
+      <router-link
+        href="https://www.tiktok.com/@house_of_peishy"
         class="social-link"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <ion-icon name="logo-twitter"></ion-icon>
-      </a>
+      <i class="fa-brands fa-tiktok"></i>
+      </router-link>
 
-      <a
+      <!-- <router-link
         href="https://www.linkedin.com/in/bright-onwuemeri-597090263"
         class="social-link"
         target="_blank"
         rel="noopener noreferrer"
       >
         <ion-icon name="logo-linkedin"></ion-icon>
-      </a>
+      </router-link> -->
 
-      <a
-        href="https://instagram.com/britinogn_"
+      <router-link
+        href="https://www.instagram.com/_houseofpeishy"
         class="social-link"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <ion-icon name="logo-instagram"></ion-icon>
-      </a>
+        <i class="fa-brands fa-instagram"></i>
+      </router-link>
     </div>
 
     <div class="copy">
       <i class="fa-regular fa-copyright"></i>
       {{ currentYear }}
-      <a href="https://brightonwuemeri.com/" target="_blank" rel="noopener noreferrer">
-        Bright Onwuemeri
+      <a href="https://github.com/Britinogn" target="_blank" rel="noopener noreferrer">
+        House Of Peishy
       </a>
     </div>
   </section>
@@ -69,8 +69,8 @@ const currentYear = new Date().getFullYear()
 .footer {
   text-align: center;
   padding: 2rem 1rem;
-  background-color: #0b0b0b;
-  color: #fff;
+  background-color:var(--text-secondary);
+  color:var(--bg-primary);
 }
 
 .social-list {
@@ -81,18 +81,18 @@ const currentYear = new Date().getFullYear()
 }
 
 .social-link {
-  color: #fff;
+  color:var(--bg-secondary);
   font-size: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-link:hover {
-  color: var(--primary, #e91e63);
+  color: var(--secondary, #e91e63);
   transform: scale(1.1);
 }
 
 .copy {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 .copy a {

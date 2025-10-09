@@ -305,29 +305,27 @@ const handleSubmit = async () => {
   try {
     const formData = new FormData()
     
-    if (form.value.mediaType === 'image') {
-      formData.append('coverImage', selectedFile.value)
-    } else {
-      formData.append('video', selectedFile.value)
-    }
+    // Your backend expects 'files' as array
+    formData.append('files', selectedFile.value)
     
     formData.append('mediaType', form.value.mediaType)
     formData.append('category', form.value.category)
     formData.append('caption', form.value.caption || '')
 
-    // Simulate progress (you can implement real progress with axios onUploadProgress)
+    // If video, add duration
+    if (form.value.mediaType === 'video' && videoDuration.value) {
+      formData.append('duration', videoDuration.value)
+    }
+
+    // Simulate progress
     const progressInterval = setInterval(() => {
       if (uploadProgress.value < 90) {
         uploadProgress.value += 10
       }
     }, 200)
 
-    let response
-    if (form.value.mediaType === 'image') {
-      response = await galleryAPI.uploadImage(formData)
-    } else {
-      response = await galleryAPI.uploadVideo(formData)
-    }
+    // Use the upload endpoint
+    const response = await galleryAPI.upload(formData)
 
     clearInterval(progressInterval)
     uploadProgress.value = 100

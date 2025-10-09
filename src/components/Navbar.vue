@@ -6,16 +6,15 @@
         <router-link to="/" >
 
             <div class="flex items-center space-x-3">
+                
+                <img src="/images/logohop.png" alt="" class="w-11">
+                <span class="text-xl font-bold" :style="{ color: 'var( --accent)' }">HouseOfPeishy</span>
                 <!-- <div class="w-8 h-8 bg-card rounded-full flex items-center justify-center shadow-md">
                     <span class="text-accent font-bold text-lg">✨</span>
                 </div> -->
-                <img src="/images/logohop.png" alt="" class="w-11">
-                <span class="text-xl font-bold" :style="{ color: 'var( --accent)' }">HouseOfPeishy</span>
             </div>
 
         </router-link>
-
-        
         
         <div class="hidden md:flex items-center space-x-1">
           <router-link v-for="item in navItems" :key="item.name" :to="item.path"
@@ -97,7 +96,7 @@ export default {
         { name: 'Home', path: '/' },
         { name: 'Gallery', path: '/gallery' },
         { name: 'Services', path: '/services' },
-        { name: 'Blog', path: '/blog' },
+        { name: 'Appointment', path: '/appointments' },
         { name: 'Contact', path: '/contact' }
       ]
     }

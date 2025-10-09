@@ -70,7 +70,7 @@ const submitForm = () => {
   const subject = encodeURIComponent(`Message from ${form.value.name}`)
   const body = encodeURIComponent(`Name: ${form.value.name}\nEmail: ${form.value.email}\n\n${form.value.message}`)
 
-  window.location.href = `mailto:support@brightonwuemeri.com?subject=${subject}&body=${body}`
+  window.location.href = `mailto:Smileypeishy1@gmail.com?subject=${subject}&body=${body}`
 
   submitted.value = true
 

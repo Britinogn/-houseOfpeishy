@@ -84,7 +84,7 @@
             <div class="flex flex-col gap-1">
               <span class="font-medium text-[var(--text-primary)] text-base">{{ appointment.customerName }}</span>
               <span class="text-[var(--primary)] font-medium text-sm">{{ appointment.serviceId?.name || 'N/A' }}</span>
-              <span class="text-[var(--text-primary)] text-sm text-[var(--text-secondary)]/80">{{ appointment.serviceId?.category || 'N/A' }}</span>
+              <span class="text-sm text-[var(--text-secondary)]/80">{{ appointment.serviceId?.category || 'N/A' }}</span>
             </div>
           </div>
         </div>

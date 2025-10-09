@@ -12,8 +12,8 @@ export const galleryAPI = {
     return await api.get(`/gallery/${id}`)
   },
 
-  // Upload image
-  async uploadImage(formData) {
+  // Upload media (both image and video)
+  async upload(formData) {
     return await api.post('/gallery/upload', formData, {
       headers: {
         'Content-Type': 'multipart/form-data'
@@ -21,31 +21,19 @@ export const galleryAPI = {
     })
   },
 
-  // Upload video
-  async uploadVideo(formData) {
-    return await api.post('/gallery/upload/video', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      }
-    })
+  // Deprecated - keeping for backward compatibility
+  async uploadImage(formData) {
+    return await this.upload(formData)
   },
 
-  // Create gallery item
-  async create(formData) {
-    return await api.post('/gallery', formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      }
-    })
+  // Deprecated - keeping for backward compatibility
+  async uploadVideo(formData) {
+    return await this.upload(formData)
   },
 
   // Update gallery item
-  async update(id, formData) {
-    return await api.put(`/gallery/${id}`, formData, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      }
-    })
+  async update(id, data) {
+    return await api.put(`/gallery/${id}`, data)
   },
 
   // Delete gallery item
@@ -56,10 +44,8 @@ export const galleryAPI = {
   // Get by category
   async getByCategory(category) {
     return await api.get(`/gallery/category/${category}`)
-  },
-
-  // Get by media type
-  async getByMediaType(mediaType) {
-    return await api.get(`/gallery/type/${mediaType}`)
   }
 }
+
+
+

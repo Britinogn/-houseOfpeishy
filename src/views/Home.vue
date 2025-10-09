@@ -7,14 +7,15 @@
     <!-- dim overlay -->
     <div class="absolute inset-0" :style="{ backgroundColor: 'var(--bg-primary)' }"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-32 flex flex-col lg:flex-row items-center gap-10">
+    <div class="relative z-10 max-w-7xl mx-auto pt-35 px-6 py-20 lg:py-32 flex flex-col lg:flex-row items-center gap-10">
       <!-- left: text -->
       <div class="w-full lg:w-1/2 text-center lg:text-left">
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight" :style="{ color: 'var(--text-primary)' }">
-          Transform your look. Book your slot today.
+         Step Into Confidence. Redefine Your Beauty at House of Peishy.
         </h1>
         <p class="mt-4 text-sm sm:text-base" :style="{ color: 'var(--text-secondary)' }">
-          Professional styling, wigs, braids and more — premium service by certified stylists.
+          Experience premium hairstyling, luxury wigs, flawless braids, 
+          and elegant beauty transformations crafted by stylists who understand your crown.
         </p>
 
         <div class="mt-8 flex flex-col sm:flex-row items-center sm:justify-start gap-3">
@@ -71,19 +72,21 @@
           class="text-3xl sm:text-4xl font-bold mb-4"
           :style="{ color: 'var(--primary)' }"
         >
-          About Us
+          About House of Peishy
         </h2>
 
         <p class="text-base leading-relaxed mb-4" :style="{ color: 'var(--text-primary)' }">
-          We're more than just a salon — we're a destination for transformation.
-          Our team of expert stylists, colorists, and beauty specialists bring
-          out your confidence through hair, makeup, and personalized style care.
+            At House of Peishy, we believe your hair tells your story 
+            and every strand deserves care, artistry, and confidence. 
+            Our team of certified stylists specializes in creating timeless looks that elevate your natural beauty.
+
         </p>
 
         <p class="text-base mb-5 leading-relaxed" :style="{ color: 'var(--text-secondary)' }">
-          From braids and wigs to natural hair treatments and luxury styling, we
-          combine artistry with professional care. Every visit is an experience
-          tailored to your beauty goals.
+          From sleek braids and luxury wigs to custom treatments and trend-setting styles,
+          we turn everyday hair into extraordinary art. Every appointment is more than beauty 
+          it’s self-expression redefined.
+
         </p>
 
         <button
@@ -108,10 +111,12 @@
         class="text-3xl sm:text-4xl font-bold mb-4"
         :style="{ color: 'var(--text-primary)' }"
       >
-        Our Services
+        Our Signature Services
       </h2>
       <p class="mb-10 max-w-2xl mx-auto" :style="{ color: 'var(--text-secondary)' }">
-        Explore our range of professional hair and beauty services — each tailored to meet your individual style and confidence.
+        Discover our exclusive range of beauty services  
+        from precision cuts to luxury installs 
+        each designed to help you look radiant, feel empowered, and own your style.
       </p>
 
       <!-- Error State -->
@@ -188,7 +193,7 @@
         <p :style="{ color: 'var(--text-secondary)' }">No services available at the moment.</p>
       </div>
 
-      <div class="mt-12">
+      <router-link to="/gallery" class="mt-12">
         <button
           @click="scrollTo('gallery')"
           class="px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
@@ -196,7 +201,7 @@
         >
           View Gallery
         </button>
-      </div>
+      </router-link>
     </div>
   </section>
 
@@ -204,8 +209,10 @@
    
   <section id="gallery" class="py-12 lg:py-20" :style="{ backgroundColor: 'var(--bg-secondary)' }">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-center" :style="{ color: 'var(--text-primary)' }">Gallery</h2>
-
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-center" :style="{ color: 'var(--text-primary)' }">The Peishy Experience</h2>
+      <p class="text-center mb-8 max-w-2xl mx-auto" :style="{ color: 'var(--text-secondary)' }">
+        Explore our gallery of stunning transformations — each look a reflection of confidence, artistry, and the unique elegance of every woman who walks through our doors.
+      </p>
       <!-- Error State -->
       <div v-if="galleryError" class="text-center py-12 mb-8 rounded-xl p-6 max-w-md mx-auto" :style="{ backgroundColor: 'color-mix(in srgb, var(--error) 8%, transparent)', border: `1px solid var(--error)` }">
         <p class="mb-2" :style="{ color: 'var(--error)' }">{{ galleryError }}</p>
@@ -285,8 +292,8 @@ const goToAppointments = () => {
 // Hero images
 const heroBg = '/images/hero-bg.jpg'
 const heroImage = '/images/hero-bg.png'
-const aboutImage = '/images/about.jpg'
-
+//const aboutImage = '/images/about.jpg'
+const aboutImage = '/images/about2.png'
 // Services
 const services = ref([])
 const servicesLoading = ref(false)

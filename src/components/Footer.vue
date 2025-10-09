@@ -45,6 +45,7 @@
         rel="noopener noreferrer"
       >
         <i class="fa-brands fa-instagram"></i>
+        
       </router-link>
     </div>
 

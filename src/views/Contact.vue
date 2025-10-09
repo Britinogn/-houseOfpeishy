@@ -1,11 +1,11 @@
 <template>
   <section class="contact" id="contact">
-    <div class="max-w-2xl mx-auto px-4 py-16 lg:py-24 text-center">
+    <div class="max-w-2xl mx-auto  px-4 py-16 lg:py-24 text-center">
       <h1 class="text-4xl lg:text-5xl font-bold mb-4" :style="{ color: 'var(--text-primary)' }">Contact</h1>
       <p class="text-lg mb-2" :style="{ color: 'var(--text-secondary)' }">Have a question or want to work together?</p>
       <p class="p2 text-2xl font-semibold mb-12">Let's Make It Happen!</p>
 
-      <form @submit.prevent="submitForm" class="space-y-6">
+      <form @submit.prevent="submitForm" class="space-y-6 var(  --shadow) py-15 px-10 bg-[var(--text-primary)] rounded-2xl ">
         <div class="flex flex-col sm:flex-row gap-4">
           <input
             v-model="form.name"
@@ -36,7 +36,7 @@
 
         <button 
           type="submit" 
-          class="w-full px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+          class="w-full px-8 py-4 cursor-pointer rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
           :style="{ backgroundColor: 'var(--primary)', color: 'var(--bg-secondary)' }"
         >
           Send Message

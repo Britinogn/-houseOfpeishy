@@ -18,7 +18,7 @@
           and elegant beauty transformations crafted by stylists who understand your crown.
         </p>
 
-        <div class="mt-8 flex flex-col sm:flex-row items-center sm:justify-start gap-3">
+        <div class="mt-8 flex flex-col sm:flex-row items-center sm:justify-center gap-3">
           <button
             @click="goToAppointments"
             class="inline-flex items-center gap-2 px-6 py-3 cursor-pointer rounded-md font-semibold shadow hover:shadow-lg  bg-[var(--primary)]  hover:bg-[var(--primary-hover)] transition-all duration-300"
@@ -90,11 +90,11 @@
         </p>
 
         <button
-          @click="goToAppointments"
-          class="inline-flex  items-center gap-2 px-6 py-3 rounded-md font-semibold shadow hover:shadow-lg transition-all duration-300"
-          :style="{ backgroundColor: 'var(--primary)', color: 'white' }"
-        >
-          Book Appointment
+            @click="goToAppointments"
+            class="inline-flex items-center gap-2 px-6 py-3 cursor-pointer rounded-md font-semibold shadow hover:shadow-lg  bg-[var(--primary)]  hover:bg-[var(--primary-hover)] transition-all duration-300"
+            :style="{ backgroundColor: '', color: 'white' }"
+          >
+            Book Appointment
         </button>
       </div>
     </div>
@@ -132,9 +132,9 @@
       </div>
 
       <!-- Service Grid -->
-      <div v-else-if="services.length > 0" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <router-link  to="/services" v-else-if="services.length > 0" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        <div
+        <div to="/services"
           v-for="service in services"
           :key="service._id"
           class="rounded-2xl shadow-md hover:shadow-xl p-6 transition-all duration-300 bg-[var(--bg-secondary)] border hover:scale-105 hover:-translate-y-1"
@@ -182,7 +182,8 @@
           </p>
         </div>
       
-      </div>
+      
+      </router-link>
 
       
       <!-- Empty State -->
@@ -226,7 +227,7 @@
       </div>
 
       <!-- Gallery Grid -->
-      <div v-else-if="gallery.length > 0" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <router-link to="/gallery" v-else-if="gallery.length > 0" class="grid grid-cols-1 sm:grid-cols-2 cursor-pointer md:grid-cols-3 lg:grid-cols-4 gap-6">
         <div
           v-for="media in gallery"
           :key="media._id"
@@ -259,7 +260,7 @@
             <p class="text-sm font-medium line-clamp-1">{{ media.caption || 'Gallery media' }}</p>
           </div>
         </div>
-      </div>
+      </router-link>
 
       <!-- Empty State -->
       <div v-else class="text-center py-12">

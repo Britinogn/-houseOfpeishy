@@ -94,7 +94,7 @@
             
             <!-- Overlay -->
             <div class="absolute inset-0 bg-[var(--bg-primary)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-12 h-12 text-[var(--text-primary)]  " fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path v-if="media.mediaType === 'image'" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
                 <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.414 7l3.293 3.293a1 1 0 010 1.414l-3.293 3.293a1 1 0 11-1.414-1.414L14.586 11H9a1 1 0 110-2h5.586l-1.707-1.707a1 1 0 011.414-1.414z"/>
               </svg>

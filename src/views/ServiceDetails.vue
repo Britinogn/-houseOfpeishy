@@ -8,7 +8,7 @@
           class="flex items-center gap-2 px-3 py-2 rounded-lg transition-all hover:bg-secondary hover:text-primary"
           :style="{ color: 'var(--text-secondary)' }"
         >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 py-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
           </svg>
           <span>Back to Services</span>

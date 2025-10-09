@@ -1,0 +1,64 @@
+/* Base CSS Variables */
+:root {
+  /* Light Mode Colors */
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  
+  /* Brand Colors */
+  --primary: #fbbf24; /* Honeyed amber for warmth */
+  --primary-hover: #f59e0b;
+  --secondary: #fee2e2; /* Light blush pink */
+  --secondary-hover: #e8a598;
+  --accent: #f472b6; /* Rosy pink pop */
+  --accent-hover: #ff6b6b;
+  
+  /* UI Elements */
+  --border-color: #e5e7eb;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --card-bg: #ffffff;
+  --sidebar-bg: #ffffff;
+  --topbar-bg: #ffffff;
+  
+  /* Status Colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+}
+
+/* Dark Mode Colors */
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  
+  /* Brighter brand colors for dark backgrounds */
+  --primary: #fbbf24;
+  --primary-hover: #f59e0b;
+  --secondary: #fee2e2; /* Lighter for contrast */
+  --secondary-hover: #e8a598;
+  --accent: #ff8787;
+  --accent-hover: #ff6b6b;
+  
+  /* Dark UI Elements */
+  --border-color: #334155;
+  --shadow: rgba(0, 0, 0, 0.3);
+  --card-bg: #0f4c75; /* Serene blue-gray */
+  --sidebar-bg: #1e293b;
+  --topbar-bg: #1e293b;
+}
+
+/* Apply theme to body */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Quick Usage Examples */
+.primary-btn { background-color: var(--primary); color: white; }
+.primary-btn:hover { background-color: var(--primary-hover); }
+.card { background-color: var(--card-bg); border: 1px solid var(--border-color); }

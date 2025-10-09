@@ -11,34 +11,34 @@
         <ion-icon name="logo-github"></ion-icon>
       </router-link> -->
 
-      <router-link
+      <a
         href="https://www.facebook.com/profile.php?id=100086133922788"
         class="social-link"
         target="_blank"
         rel="noopener noreferrer"
       >
      <i class="fa-brands fa-facebook"></i>
-      </router-link>
+      </a>
 
-      <router-link
+      <a
         href="https://www.tiktok.com/@house_of_peishy"
         class="social-link"
         target="_blank"
         rel="noopener noreferrer"
       >
       <i class="fa-brands fa-tiktok"></i>
-      </router-link>
+      </a>
 
-      <!-- <router-link
-        href="https://www.linkedin.com/in/bright-onwuemeri-597090263"
+      <a
+        href="https://www.pinterest.com/house_of_peishy/"
         class="social-link"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <ion-icon name="logo-linkedin"></ion-icon>
-      </router-link> -->
+        <i class="fa-brands fa-pinterest"></i>
+      </a>
 
-      <router-link
+      <a
         href="https://www.instagram.com/_houseofpeishy"
         class="social-link"
         target="_blank"
@@ -46,7 +46,7 @@
       >
         <i class="fa-brands fa-instagram"></i>
         
-      </router-link>
+      </a>
     </div>
 
     <div class="copy">

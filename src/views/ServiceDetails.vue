@@ -149,7 +149,7 @@
             <h2 class="text-3xl lg:text-4xl font-bold mb-4" :style="{ color: 'var(--text-primary)' }">Ready to Transform?</h2>
             <p class="text-xl max-w-2xl mx-auto" :style="{ color: 'var(--text-secondary)' }">Experience premium styling with certified experts. Book your slot today.</p>
           </div>
-          <router-link class="flex flex-col sm:flex-row gap-4 justify-center">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               @click="bookService"
               class="flex-1 max-w-sm px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-xl"
@@ -169,7 +169,7 @@
             >
               Explore More Services
             </button>
-          </router-link>
+          </div>
         </div>
       </div>
 

@@ -6,6 +6,7 @@
         <h2>Appointment Details</h2>
         <button @click="$emit('close')" class="close-btn">
           <CloseIcon />
+          <i class="fa-solid fa-circle-xmark"></i>
         </button>
       </div>
 
@@ -87,17 +88,17 @@
           <div class="info-card">
             <div class="sms-status">
               <div class="sms-item">
-                <CheckIcon v-if="appointment.smsSent?.booking" class="check-icon success" />
+                <CheckIcon v-if="appointment.emailSent?.booking" class="check-icon success" />
                 <XIcon v-else class="check-icon error" />
                 <span>Booking Confirmation</span>
               </div>
               <div class="sms-item">
-                <CheckIcon v-if="appointment.smsSent?.confirmation" class="check-icon success" />
+                <CheckIcon v-if="appointment.emailSent?.confirmation" class="check-icon success" />
                 <XIcon v-else class="check-icon error" />
                 <span>Appointment Confirmation</span>
               </div>
               <div class="sms-item">
-                <CheckIcon v-if="appointment.smsSent?.reminder" class="check-icon success" />
+                <CheckIcon v-if="appointment.emailSent?.reminder" class="check-icon success" />
                 <XIcon v-else class="check-icon error" />
                 <span>Reminder</span>
               </div>
@@ -121,6 +122,7 @@
         </button>
         <button @click="$emit('edit')" class="btn-primary">
           <EditIcon />
+          <i class="fa-regular fa-pen-to-square"/>
           Edit Appointment
         </button>
       </div>
@@ -129,6 +131,8 @@
 </template>
 
 <script setup>
+
+import {CheckIcon, XIcon , CloseIcon} from 'lucide-vue-next';
 // Props
 defineProps({
   appointment: {
@@ -141,18 +145,18 @@ defineProps({
 defineEmits(['close', 'edit'])
 
 // Icons
-const CloseIcon = {
-  template: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
-}
+// const CloseIcon = {
+//   template: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+// }
 const EditIcon = {
   template: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>'
 }
-const CheckIcon = {
-  template: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>'
-}
-const XIcon = {
-  template: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
-}
+// const CheckIcon = {
+//   template: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>'
+// }
+// const XIcon = {
+//   template: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+// }
 
 // Methods
 const formatDate = (date) => {

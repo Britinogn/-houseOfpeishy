@@ -20,7 +20,7 @@ import Footer from './components/Footer.vue'
  
     <!-- <Navbar /> -->
     <Navbar v-if="!$route.meta.hideNavbar"/>
-    <Footer/>
+    <Footer v-if="!$route.meta.hideFooter" />
     <!-- <router-view /> -->
 
   <Preloader />

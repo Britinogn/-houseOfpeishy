@@ -56,8 +56,10 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { logout } from '../services/auth.js'
 import ThemeToggle from './ThemeToggle.vue'
-import { UsersIcon, GalleryHorizontal, Calendar , MenuIcon, Currency, Scissors}from 'lucide-vue-next'
+import { ChevronDownIcon, SettingsIcon, UserIcon, LogOutIcon , MenuIcon, Currency, Scissors}from 'lucide-vue-next'
+
 
 const route = useRoute()
 const router = useRouter()
@@ -74,6 +76,7 @@ const pageTitle = computed(() => {
     '/admin/gallery': 'Gallery',
     '/admin/availability': 'Availability',
     '/admin/profile': 'Profile',
+    '/admin/settings': 'Settings',
   }
   return titles[route.path] || 'Admin'
 })
@@ -90,7 +93,7 @@ const toggleSidebar = () => {
 
 const handleLogout = () => {
   // Add logout logic
-  router.push('/login')
+   logout()
 }
 
 // Close dropdown on outside click
@@ -245,6 +248,7 @@ onUnmounted(() => {
   text-decoration: none;
   transition: background-color 0.2s ease;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .dropdown-item:hover {

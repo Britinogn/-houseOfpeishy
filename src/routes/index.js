@@ -78,35 +78,42 @@ const routes = [
         name: 'Dashboard',
         component: Dashboard,
         meta:{hideNavbar: true},
+        meta: { hideFooter: true, hideNavbar: true } 
       },
       {
         path: 'appointments',
         name: 'Appointments',
         component: Appointments,
         meta:{hideNavbar: true},
+        meta: { hideFooter: true, hideNavbar: true } 
       },
       {
         path: 'services',
         name: 'Services',
         component: Services,
         meta:{hideNavbar: true},
+        meta: { hideFooter: true, hideNavbar: true } 
       },
       {
         path: 'gallery',
         name: 'Gallery',
-        component: Gallery
+        component: Gallery,
+        meta:{hideNavbar: true},
+        meta: { hideFooter: true, hideNavbar: true } 
       },
       {
         path: 'availability',
         name: 'Availability',
         component: Availability,
         meta:{hideNavbar: true},
+        meta: { hideFooter: true, hideNavbar: true } 
       },
       {
         path: 'profile',
         name: 'Profile',
         component: Profile,
         meta:{hideNavbar: true},
+        meta: { hideFooter: true, hideNavbar: true } 
       },
     ]
   },

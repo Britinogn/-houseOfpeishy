@@ -50,10 +50,10 @@
     </div>
 
     <div class="copy">
-      <i class="fa-regular fa-copyright"></i>
       {{ currentYear }}
-      <a href="https://github.com/Britinogn" target="_blank" rel="noopener noreferrer">
-        House Of Peishy
+      <i class="fa-regular fa-copyright"></i>
+      <a href="https://github.com/Britinogn" target="_blank" rel="noopener noreferrer" class="font-medium ">
+          House Of Peishy
       </a>
     </div>
   </section>

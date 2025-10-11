@@ -56,7 +56,7 @@
     </div>
 
     <!-- Filters -->
-    <div class="flex flex-col gap-4 sm:gap-6 mb-6 sm:mb-8 flex-wrap items-end">
+    <div class="flex md:flex-row gap-4 sm:gap-6 mb-6 sm:mb-8 flex-wrap items-end">
       <div class="flex-1 min-w-0">
         <label class="block text-sm font-medium text-[var(--text-secondary)] mb-2">Status</label>
         <select v-model="filters.status" class="w-full px-4 py-2 border border-[var(--border-color)] rounded-lg bg-[var(--bg-secondary)] text-[var(--text-primary)] text-sm">

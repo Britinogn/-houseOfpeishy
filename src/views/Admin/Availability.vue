@@ -48,7 +48,7 @@
 
     <!-- Filters -->
     <div class="bg-[var(--card-bg)] border border-[var(--border-color)] rounded-lg p-4 sm:p-6 mb-6 sm:mb-8">
-      <div class="flex flex-col sm:flex-row gap-4 items-end">
+      <div class="flex sm:flex-row gap-4 flex-wrap items-end">
         <div class="flex-1">
           <label class="block text-sm font-medium text-[var(--text-primary)] mb-2">Day</label>
           <select v-model="filters.day" class="w-full px-4 py-2 bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-lg text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/20">

@@ -20,7 +20,11 @@ export function setToken(token) {
 
 // Set admin (normalize id vs _id)
 export function setAdmin(admin) {
-  const normalizedAdmin = admin ? { ...admin, id: admin.id || admin._id } : null;
+ let normalizedAdmin = null;
+if (admin && typeof admin === 'object') {
+  normalizedAdmin = { ...admin, id: admin.id || admin._id };
+}
+
   auth.admin = normalizedAdmin;
 
   if (normalizedAdmin) {

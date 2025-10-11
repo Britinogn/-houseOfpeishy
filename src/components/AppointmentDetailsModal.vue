@@ -5,7 +5,7 @@
       <div class="modal-header">
         <h2>Appointment Details</h2>
         <button @click="$emit('close')" class="close-btn">
-          <CloseIcon />
+         
           <i class="fa-solid fa-circle-xmark"></i>
         </button>
       </div>
@@ -132,7 +132,7 @@
 
 <script setup>
 
-import {CheckIcon, XIcon , CloseIcon} from 'lucide-vue-next';
+import {CheckIcon, XIcon } from 'lucide-vue-next';
 // Props
 defineProps({
   appointment: {

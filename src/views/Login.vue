@@ -123,10 +123,10 @@ export default {
         //const token = res.data.token;
         setToken(token);
         setAdmin({
-            id: res.data.id,
-            username: res.data.username || this.username,
-            email: res.data.email || this.email,
-            role: res.data.role || this.role
+            id: res.id,
+            username: res.username || this.form.username,
+            email: res.email || this.form.email,
+            role: res.role || this.form.role
         });
 
         // setToken(response.data.token)

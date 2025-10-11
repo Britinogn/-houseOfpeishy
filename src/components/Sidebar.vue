@@ -8,7 +8,7 @@
       <!-- <p class="brand-subtitle text-secondary text-sm mt-1">Admin Panel</p> -->
       <!-- Close button for mobile -->
       <button @click="$emit('close')" class="close-btn">
-        <CloseIcon />
+        <XIon />
       </button>
     </div>
 

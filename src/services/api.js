@@ -9,7 +9,7 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://houseofpeishy.onre
 // Create axios instance
 const api = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 10000, // 60s default; can be overridden per request
+  timeout: 30000, // 60s default; can be overridden per request
   headers: {
     'Content-Type': 'application/json',
   }

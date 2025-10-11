@@ -57,6 +57,9 @@
   const isAdmin = window.location.pathname.startsWith("/admin");
   if (isAdmin) return;
 
+  const isLoggedIn = window.location.pathname.startsWith("/login");
+  if (isLoggedIn) return;
+
   var options = {
     whatsapp: "+2348133676784", // Your WhatsApp number
     call_to_action: "💬 Need a style upgrade? Chat with us!", 

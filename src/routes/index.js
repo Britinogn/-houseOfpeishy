@@ -64,7 +64,7 @@ const routes = [
     path: '/login', 
     name: 'Login', 
     component: Login ,
-    meta:{hideNavbar: true}
+    meta: { hideFooter: true, hideNavbar: true } 
   },
   
   // Admin Routes (protected + wrapped in AdminLayout)

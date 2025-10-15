@@ -3,7 +3,7 @@ import { auth } from './auth'
 import { useRouter } from 'vue-router' // Import router for redirects
 
 // Base API URL (use env var for production)
-//const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+//onst API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://houseofpeishy.onrender.com/api'
 
 // Create axios instance

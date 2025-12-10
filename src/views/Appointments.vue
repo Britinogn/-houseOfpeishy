@@ -69,6 +69,8 @@
         </button>
       </div>
 
+      
+
       <!-- Form Container -->
       <div v-else>
         <!-- Step 1: Select Service -->
@@ -324,8 +326,18 @@
             <h2 class="text-3xl font-bold mb-2" :style="{ color: 'var(--success)' }">
               Booking Confirmed!
             </h2>
-            <p class="mb-6" :style="{ color: 'var(--text-secondary)' }">
+            <!-- <p class="mb-6" :style="{ color: 'var(--text-secondary)' }">
               Your appointment has been successfully booked. Check your email for confirmation.
+            </p> -->
+
+            <p class="mb-6" :style="{ color: 'var(--text-secondary)' }">
+              Your appointment has been successfully booked. 
+              <span v-if="selectedService.emailSent?.booking">
+                Check your email for confirmation.
+              </span>
+              <span v-else>
+                A confirmation email will be sent shortly.
+              </span>
             </p>
 
             <div class="rounded-lg p-4 mb-6 text-left" :style="{ backgroundColor: 'var(--card-bg)', border: '1px solid var(--border-color)' }">

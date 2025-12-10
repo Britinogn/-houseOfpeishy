@@ -2,14 +2,15 @@ import axios from 'axios'
 import { auth } from './auth'
 import { useRouter } from 'vue-router' // Import router for redirects
 
+const router = useRouter() // Get router instance
 // Base API URL (use env var for production)
-//const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://houseofpeishy.onrender.com/api'
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+//const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://houseofpeishy.onrender.com/api'
 
 // Create axios instance
 const api = axios.create({
   baseURL: API_BASE_URL,
-  timeout: 30000, // 60s default; can be overridden per request
+  timeout: 30000,
   headers: {
     'Content-Type': 'application/json',
   }
@@ -36,7 +37,6 @@ api.interceptors.response.use(
       localStorage.removeItem('token')
       localStorage.removeItem('admin')
       auth.token = null
-      const router = useRouter() // Get router instance
       router.push('/login')
     }
 
